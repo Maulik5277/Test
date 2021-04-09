@@ -1,90 +1,64 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+func numberRightTringle(){
+print("enter the no of row")
+let n = Int(readLine()!)!
+for i in 1..<n+1 {
+    for j in 1...i {
+        print(j, terminator: "")
+    }
+    print("")
+}
+ }
+func sequecenrightTriangle(){
+print("enter the no of row")
+let n = Int(readLine()!)!
+var value = 0
+for i in 1...n {
 
-## User settings
-xcuserdata/
-
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
-build/
-DerivedData/
-*.moved-aside
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-
-## Obj-C/Swift specific
-*.hmap
-
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
-.build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
-# Accio dependency management
-Dependencies/
-.accio/
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
-
-# Code Injection
-#
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
-
-iOSInjectionProject/
+    for _ in 1...i{
+        value = value + 1
+        print(value,terminator : "")
+    }
+    print(" ")
+}
+}
+func pascalTrinagle(){
+  print("enter the no of row:")
+  let n = Int(readLine()!)!
+        var no:Int = 1
+        for i in 0...n{  
+          for j in 0...i {
+            if (j == 0 || i == 0){
+                no = 1
+            }else{
+              no = no * (i - j + 1) / j
+            }
+            print("\(no)",  terminator: "")
+          }
+          print("")
+        }
+}
+var tmp=1
+repeat
+{
+  print("enter1.number right tringle pattern")
+  print("enter2.for sequential number right tringle pattern")
+  print("enter3.for pascal tringle pattern")
+  print("enter0.for exit")
+  print("enter your choice")
+  let choice = readLine()
+  switch choice! 
+  {
+    case "0":
+          tmp=0
+          print("quit..")
+          break
+    case "1":
+        numberRightTringle()
+    case "2":
+        sequecenrightTriangle()
+    case "3":
+        pascalTrinagle()
+    default:
+        print("enter proper choice")
+  }
+}while(tmp != 0)
